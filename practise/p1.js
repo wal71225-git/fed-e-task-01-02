@@ -66,3 +66,28 @@ console.log(JSON.stringify(pay))
 pay(10);
 pay(10);
 pay(10);
+
+
+// 模拟常用的高阶函数 map every some
+//map
+const map = (array,fn3) => {
+    let result= [];
+    for (const value of array) {
+        result.push(fn3(value));
+    }
+    return result;
+}
+//测试map
+let arr = [1,2,3,4,5];
+let arrResult = map(arr, value => {
+    return value * value;
+})
+console.log(arrResult);
+
+//every
+
+
+
+
+//纯函数和非纯函数
+//slice和splice
