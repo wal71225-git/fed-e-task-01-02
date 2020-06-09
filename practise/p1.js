@@ -90,4 +90,25 @@ console.log(arrResult);
 
 
 //纯函数和非纯函数
-//slice和splice
+//slice和splice 
+
+
+//模拟lodash memoize方法的实现 缓存函数 
+
+
+
+//柯里化
+
+
+
+//实现loadsh里面的柯里化函数 curry
+
+
+
+//函数组合演示，获取数组最后一个元素
+
+//loadsh组合函数flow() flowRight(), 获取数组最后一个元素并转换成大写
+
+
+
+//模拟实现flowRinght()
