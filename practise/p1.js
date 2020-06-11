@@ -112,3 +112,33 @@ console.log(arrResult);
 
 
 //模拟实现flowRinght()
+
+
+// 函子示例(函子不显示)
+
+class Container {
+    static of (value) {
+        return new Container(value);
+    }
+    constructor(value){
+        this.value = value;
+    }
+    map(fn){
+        return Container.of(fn(this.value))
+    }
+}
+let h = Container.of(5).map(x => x + 1).map( x => x * x);
+console.log(h);
+
+
+//mayBe函子处理空值
+
+class MayBe {
+
+}
+
+
+//either 函子
+
+
+//IO函子
