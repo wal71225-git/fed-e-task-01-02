@@ -2,13 +2,13 @@ const fp = require('lodash/fp');
 //数据
 const cars =[
     {
-        name: 'FF',
+        name: 'F F',
         horsepower: 660,
         dollar_value: 700000,
         in_stock: true
     },
     {
-        name: 'SCZ',
+        name: 'SC Z',
         horsepower: 650,
         dollar_value: 648000,
         in_stock: false
@@ -58,13 +58,13 @@ let _average = function(xs) {
 // }
 // console.log(averageDollarValue(cars));
 
-function getDoollar_value(car){
-    console.log(car)
-    return car.dollar_value;
-}
 
-let averageDollarValue  = function(cars) {
-    console.log(cars)
-    return fp.flowRight(_average,fp.map(getDoollar_value()))
-}
-console.log(averageDollarValue(cars))
+ let averageDollarValue  = fp.flowRight(_average,fp.map(fp.prop('dollar_value')))
+ console.log(averageDollarValue(cars))
+
+//4.编写sanitizeNames函数
+let  _underscore = fp.replace(/\W+/g,'_');
+let temp = fp.flowRight(_underscore,fp.toLower,fp.prop('name'));
+let anitizeNames = fp.map(temp);
+let result =anitizeNames(cars);
+
