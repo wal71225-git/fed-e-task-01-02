@@ -24,7 +24,7 @@ class Maybe {
         return this.isNothing ? this : Maybe.of(fn(this.value))
     }
 }
-moudule.exports = {
+module.exports = {
     Maybe,
     Container
 }
